@@ -1,2 +1,2 @@
 # 自用mysql client
-版本8.0.34
+mysql client版本8.0.35 添加数据库备份脚本在`/script`下 添加`cron`组建用于定时备份数据库
