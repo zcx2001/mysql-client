@@ -20,8 +20,8 @@ RUN if [ "${RUNNER}" != "github" ]; then \
         sed -i -E 's/(archive|security|ports).ubuntu.(org|com)/mirrors.aliyun.com/g' /etc/apt/sources.list; \
     fi \   
     && apt-get update \
-    && apt-get install -y lsb-release ca-certificates locales tzdata wget gnupg cron nano --no-install-recommends\
-    && dpkg -i /tmp/mysql-apt-config_0.8.30-1_all.deb \
+    && apt-get install -y lsb-release ca-certificates locales tzdata wget gnupg cron nano --no-install-recommends \
+    && dpkg -i /tmp/mysql-apt-config_0.8.29-1_all.deb \
     && apt-get update \
     && apt-get install -y mysql-client=8.0.37-1ubuntu22.04 --no-install-recommends \
     && locale-gen en_US.UTF-8  \
