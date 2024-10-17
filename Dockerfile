@@ -23,7 +23,7 @@ RUN if [ "${RUNNER}" != "github" ]; then \
     && apt-get install -y lsb-release ca-certificates locales tzdata wget gnupg cron nano --no-install-recommends \
     && dpkg -i /tmp/mysql-apt-config_0.8.29-1_all.deb \
     && apt-get update \
-    && apt-get install -y mysql-client=8.0.39-1ubuntu22.04 --no-install-recommends \
+    && apt-get install -y mysql-client=8.0.40-1ubuntu22.04 --no-install-recommends \
     && locale-gen en_US.UTF-8  \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /etc/cron.*/* \
