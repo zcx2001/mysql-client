@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 ARG RUNNER=local
 
-ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 
 # 修正中文显示
 ENV LANG en_US.UTF-8
