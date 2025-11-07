@@ -22,7 +22,8 @@ RUN if [ "${RUNNER}" != "github" ]; then \
     fi \   
     && apt-get update \
     && apt-get install -y lsb-release ca-certificates locales tzdata wget gnupg cron nano --no-install-recommends \
-    && dpkg -i /tmp/mysql-apt-config_0.8.29-1_all.deb \
+    && echo "mysql-apt-config mysql-apt-config/select-server select mysql-8.0" | debconf-set-selections \
+    && dpkg -i /tmp/mysql-apt-config_0.8.36-1_all.deb \
     && apt-get update \
     && apt-get install -y mysql-client=8.0.44-1ubuntu24.04 --no-install-recommends \
     && locale-gen en_US.UTF-8  \
