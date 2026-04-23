@@ -25,7 +25,7 @@ RUN if [ "${RUNNER}" != "github" ]; then \
     && echo "mysql-apt-config mysql-apt-config/select-server select mysql-8.0" | debconf-set-selections \
     && dpkg -i /tmp/mysql-apt-config_0.8.36-1_all.deb \
     && apt-get update \
-    && apt-get install -y mysql-client=8.0.45-1ubuntu24.04 --no-install-recommends \
+    && apt-get install -y mysql-client=8.0.46-1ubuntu24.04 --no-install-recommends \
     && locale-gen en_US.UTF-8  \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /etc/cron.*/* \
